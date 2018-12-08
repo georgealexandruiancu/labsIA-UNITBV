@@ -1,6 +1,3 @@
-########
-# - REFACOTRY FROM kMeans.py ---- incercarea a 2 a
-########
 from collections import defaultdict
 from random import uniform
 from math import sqrt
@@ -150,4 +147,4 @@ points = [
 #     return array
 # for index in myShuffle(points):
 #     newPoints.append(index)
-kMeans(points, 300)
+kMeans(points, 3)
