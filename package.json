@@ -1,0 +1,22 @@
+{
+  "name": "labsia-unitbv",
+  "version": "1.0.0",
+  "description": "Homework AI in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgealexandruiancu/labsIA-UNITBV.git"
+  },
+  "author": "Iancu George-Alexandru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgealexandruiancu/labsIA-UNITBV/issues"
+  },
+  "homepage": "https://github.com/georgealexandruiancu/labsIA-UNITBV#readme",
+  "dependencies": {
+    "numjs": "^0.16.0"
+  }
+}
