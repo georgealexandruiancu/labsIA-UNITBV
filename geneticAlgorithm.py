@@ -13,3 +13,11 @@ def initialize(p_zero, N):
     return map
 
 initialize(0.3, 4)
+
+def createNewMember(maxRoute, N):
+
+    routeLength = random.randint(0, maxRoute)
+
+    for i in range(0, routeLength)
+
+    return member
