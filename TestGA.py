@@ -199,7 +199,7 @@ def main():
     sparseness_of_map = 0.95
     size_of_map = 100
     population_size = 10
-    number_of_iterations = 1000
+    number_of_iterations = 10
     number_of_couples = 9
     number_of_winners_to_keep = 2
     mutation_probability = 0.05

@@ -51,17 +51,17 @@ while k < 3:
             w1[1] = N
 
         elif det2 < det1 and det2 < det3:
-                    M = calculateM(w2, c, l, w2Copy, index)
-                    N = calculateN(w2, c, l, w2Copy, index) 
-                    w2[0] = M
-                    w2[1] = N
+            M = calculateM(w2, c, l, w2Copy, index)
+            N = calculateN(w2, c, l, w2Copy, index) 
+            w2[0] = M
+            w2[1] = N
 
         elif det3 < det1 and det3 < det2:
-                        M = calculateM(w3, c, l, w3Copy, index)
-                        N = calculateN(w3, c, l, w3Copy, index) 
-                        w3[0] = M
-                        w3[1] = N
-                        k += 1
+            M = calculateM(w3, c, l, w3Copy, index)
+            N = calculateN(w3, c, l, w3Copy, index) 
+            w3[0] = M
+            w3[1] = N
+            k += 1
 
-                        ViewEpocs(k, w1, w2, w3)
+            ViewEpocs(k, w1, w2, w3)
       

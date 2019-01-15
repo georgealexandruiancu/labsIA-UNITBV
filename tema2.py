@@ -150,4 +150,4 @@ points = [
 #     return array
 # for index in myShuffle(points):
 #     newPoints.append(index)
-kMeans(points, 300)
+kMeans(points, 10)
