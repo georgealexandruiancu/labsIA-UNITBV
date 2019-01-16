@@ -7,20 +7,21 @@ random = []
 newRandom =[]
 def copyInBaseTwo(var):
     varTemp = np.base_repr(var, 2)
-    if len(varTemp) > 4 and len(varTemp) < 6:
+    if len(varTemp) > 1 and len(varTemp) < 3:
         varTemp = varTemp+"0"
-    if len(varTemp) > 3 and len(varTemp) < 6:
+    if len(varTemp) > 0 and len(varTemp) < 3:
         varTemp = varTemp+"00"
     varBase.append(varTemp)
     numPicker.append(0)
 
     
-a1 = [26,11,54,19,39,22]
-fi = [0.0385, 0.0909, 0.0185, 0.0526, 0.0256, 0.0455]
+a1 = [2,1,-1]
+fi = [0.0385, 0.0909, 0.0185]
 pi = []
 
 length = len(a1)
 
+# init 1 
 for i in range(0, length):
      copyInBaseTwo(a1[i])
 
@@ -41,7 +42,7 @@ def randomize(var, indexG, mutatie):
 
 def incrucisare(random, indexG, mutatie):
     newRandom = []
-    intreg = np.random.randint(1,6)
+    intreg = np.random.randint(1,3)
     print("intreg = ", intreg)
     index = 0
     while index < len(random)-1:
@@ -65,6 +66,7 @@ def incrucisare(random, indexG, mutatie):
     else:
         print("Generatia " , indexG, ": ", newRandom)
 
+# init 2
 makeFIandPI() 
 mutatieProbabila = 30
 
