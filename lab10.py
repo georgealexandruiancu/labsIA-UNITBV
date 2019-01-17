@@ -1,61 +1,32 @@
-import random
-import numpy as np
-import math as math
 
-yp1 = [45,50,40,55,200,48,195,43,190]
-yp2 = [85,43,80,42,43,40,41,87,40]
-yp3 = -1
-w = [
-    [1, -1, 1],
+import numpy as np
+from PerceptronLab10 import Perceptron
+
+trainingInputs = np.array([
+    [45, 85, -1],
+    [50, 43, -1],
+    [40, 80, -1],
+    [55, 42, -1],
+    [200, 43, -1],
+    [48, 40, -1],
+    [195, 41, -1],
+    [43, 87, -1],
+    [190, 40, -1]
+])
+labels = np.array([
+    [1, -1, -1],
     [-1, 1, -1],
-    [1 ,-1 ,-1],
+    [1, -1, -1],
     [-1, 1, -1],
     [-1, -1, 1],
     [-1, 1, -1],
-    [-1, -1 ,1],
+    [-1, -1, 1],
     [1, -1, -1],
     [-1, -1, 1]
-    ]
-wF1 = []
-w2 = []
-def fActivare (net):
-    print ("FUNCTIA DE ACTIVARE: ")
-    f = (2/(1 + (2.71**(-net)))-1)
-    return (f) 
+])
+perceptron = Perceptron(3)
+perceptron.train(trainingInputs, labels)
 
-wT = np.array(w)[np.newaxis]
-net = np.dot(yp1, wT.T)
-print("NET 1 CALCULAT: ", net)
+inputs = trainingInputs
+perceptron.predict(inputs)
 
-fNET1 = fActivare(net)
-print(fNET1)
-
-wT = np.array(w)[np.newaxis]
-net = np.dot(yp2, wT.T)
-print("NET 2 CALCULAT: ", net)
-
-fNET2 = fActivare(net)
-print(fNET2)
-
-def functionVerify(yTest, item, iteration):
-    wT = np.array(w)[np.newaxis]
-    net = np.dot(yTest, wT.T)
-    fNETverification = fActivare(net)
-    print(fNETverification)
-    if item == 'scaun':
-        print("In iteratia: ", iteration, " avem: scaun")
-    elif item == 'masa':
-        print("In iteratia: ", iteration, " avem: masa")
-    elif item == 'pat':
-        print("In iteratia: ", iteration, " avem: pat")
-    
-def calculateItems():
-    for i in range(len(yp1)):
-        if (yp1[i] - yp2[i]) > 120:
-            functionVerify(yp1, 'pat', i)
-        elif yp1[i] > yp2[i]:
-            functionVerify(yp1, 'masa', i)
-        elif yp1[i] < yp2[i]:
-            functionVerify(yp2,'scaun', i)
-
-calculateItems()
