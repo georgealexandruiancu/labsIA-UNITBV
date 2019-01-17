@@ -1,6 +1,8 @@
 import numpy as np
 import math as math
-
+"""
+---------- VEZI LABORATORUL 4 si 5 !
+"""
 w1 = [0,1,0]
 x1 = [2,1,-1]
 d1 = -1

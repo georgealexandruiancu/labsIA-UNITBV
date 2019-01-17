@@ -1,7 +1,12 @@
 import csv
 
 myList = []
-
+"""
+-----
+Comanda deschidere fisier 
+libraria csv e folosita pentru parsarea fisierului
+delimiter - ajuta la impartirea pe linii si coloane csv
+"""
 with open('./iris.data') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
 
@@ -12,8 +17,9 @@ with open('./iris.data') as csvfile:
 
 import numpy as np
 
-npArray = np.array(myList)
+npArray = np.array(myList) #creaza un obiect cu lista importata din csv
 
+#INITIALIZARE VARIABILE NECESARE PENTRU LAB
 min = []
 max = []
 average = []
@@ -24,11 +30,13 @@ norm_values = []
 new_array = []
 
 for i in range(4):
-    min.append(np.min(npArray[:, i]))
-    max.append(np.max(npArray[:, i]))
-    average.append(np.average(npArray[:, i]))
-    median.append(np.median(npArray[:, i]))
+    min.append(np.min(npArray[:, i]))  #creaza minimul parsand cu i
+    max.append(np.max(npArray[:, i]))  #creaza maximul parsand cu i
+    average.append(np.average(npArray[:, i])) #pune in vector media 
+    median.append(np.median(npArray[:, i])) #pune in vector si calculeaza mediana de-a lungul axei
 
+
+#functie normalizare 
 for column in npArray:
     norm_value = []
 

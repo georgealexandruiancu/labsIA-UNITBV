@@ -1,6 +1,8 @@
 import numpy as np
 import math as math
-
+"""
+------------------ VEZI LAB5.1.py
+"""
 x1 = [1,-2]
 x2 = [0,1]
 x3 = [2,3]

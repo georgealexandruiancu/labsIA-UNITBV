@@ -14,7 +14,7 @@ print y
 # PRODUS SCALAR -----
 for i, j in zip(x,y):
     print (i,j)
-    SclarProduct += i * j
+    SclarProduct += i * j  #calculeaza produsul scalar
 
 print("Produsul sclar: ")
 print SclarProduct
@@ -23,7 +23,7 @@ print SclarProduct
 for i in x:
     noRadX += i*i
 
-lungX = math.sqrt(noRadX)
+lungX = math.sqrt(noRadX) #calculeaza radicalul din vector
 print ("lungX: {:.2f}".format(lungX))
 
 

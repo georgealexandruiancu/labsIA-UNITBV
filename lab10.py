@@ -1,7 +1,7 @@
 
 import numpy as np
 from PerceptronLab10 import Perceptron
-
+#initializare variabile
 trainingInputs = np.array([
     [45, 85, -1],
     [50, 43, -1],
@@ -24,9 +24,12 @@ labels = np.array([
     [1, -1, -1],
     [-1, -1, 1]
 ])
+#creare obiect cu dimensiunea de 3 in acest caz
 perceptron = Perceptron(3)
+#apelare functie de instruire perceptron din obiectul Perceptron vezi PerceptronLab10.py
 perceptron.train(trainingInputs, labels)
-
+#initializare inputs pentru prezicere
 inputs = trainingInputs
+#apelare functie de prezicere din obiectul Perceptron vezi PerceptronLab10.py
 perceptron.predict(inputs)
 
