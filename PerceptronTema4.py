@@ -30,14 +30,14 @@ class Perceptron(object):
                 exactPrediction = []
                 for itemL in label:
                     print(itemL)
-                    # prediction = self.predict(inputs)
-                    # print(itemL)
-                    # self.weights[1:] += self.learning_rate * (itemL - prediction) * inputs
-                    # self.weights[0] += self.learning_rate * (itemL - prediction)
-                    # exactPrediction.append(prediction)
-                print("Algoritm prediction: ", exactPrediction)
+                    prediction = self.predict(inputs)
+                    print(itemL)
+                    self.weights[1:] += self.learning_rate * (itemL - prediction) * inputs
+                    self.weights[0] += self.learning_rate * (itemL - prediction)
+                    exactPrediction.append(prediction)
+                #print("Algoritm prediction: ", exactPrediction)
                
-                if exactPrediction == [1, -1, -1]:
+                if exactPrediction == [-1, 1, -1]:
                     result = "Litera L"
                 else:
                     result = "Nu e L"

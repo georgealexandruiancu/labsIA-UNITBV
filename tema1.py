@@ -20,12 +20,6 @@ wF3= [0,0,0]
 
 i = 0
 
-# def Test():
-#     wTest = [1,-1,0,0.5]
-#     xTest = [1,-2,0,-1]
-#     wT = np.array(wTest)[np.newaxis]
-#     net1 = np.dot(xTest, wT.T)
-#     print(net1)
 
 # REPETATI SECVENTA DE INSTRUIRE (x1,d1) , (x2,d2) pana cand se obtin raspunsurile corecte. Listati valorile net^K obtinute.
 

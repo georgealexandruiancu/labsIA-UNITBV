@@ -19,7 +19,7 @@ import numpy as np
 
 npArray = np.array(myList) #creaza un obiect cu lista importata din csv
 
-#INITIALIZARE VARIABILE NECESARE PENTRU LAB
+
 min = []
 max = []
 average = []

@@ -16,10 +16,25 @@ def copyInBaseTwo(var):
 
     
 a1 = [2,1,-1]
+a1C = [[2],[1],[-1]]
+a2C = [[0],[-1],[1]]
+
 fi = [0.0385, 0.0909, 0.0185]
 pi = []
-
+d1 = -1
+d2 = 1
+a = [[0], [1], [0]]
+c = 0.1
 length = len(a1)
+def perceptron (a, x, d, c):
+    net = np.dot(np.transpose(a)[0], x)[0]
+ 
+    if (np.sign(net) != d):
+        coef = np.dot(c * (-1 + d1), x)
+        a = np.add(a, coef)
+ 
+    return [a, net]
+ 
 
 # init 1 
 for i in range(0, length):
@@ -43,7 +58,7 @@ def randomize(var, indexG, mutatie):
 def incrucisare(random, indexG, mutatie):
     newRandom = []
     intreg = np.random.randint(1,3)
-    print("intreg = ", intreg)
+    print("Incrucisare bit cu = ", intreg)
     index = 0
     while index < len(random)-1:
 
@@ -76,10 +91,16 @@ for i in range(100):
     mutatieA = 1
     randomize(varBase, indexGeneration, mutatieA)
     mutatieProbabila = mutatieProbabila + 30
+    [w, net1] = perceptron(a, a1C, d1, c)
+    [w, net2] = perceptron(a, a2C, d2, c)
+    print("NET1: =", net1)
+    print("NET2: =", net2)
   else: 
     mutatieA = 0
     randomize(varBase, indexGeneration, mutatieA)
+    [w, net1] = perceptron(a, a1C, d1, c)
+    [w, net2] = perceptron(a, a2C, d2, c)
+    print("NET1: =", net2)
+    print("NET2: =", net1)
+
   indexGeneration = indexGeneration + 1 
-
-
-
